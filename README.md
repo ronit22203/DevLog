@@ -5,7 +5,11 @@
 
 **DevLog** is a simple yet powerful CLI tool that helps developers track their daily progress, learnings, and challenges using AI-powered insights. Built for developers who want to reflect on their journey and get intelligent feedback on their growth.
 
-[![Watch the video](https://cdn.loom.com/sessions/thumbnails/95a1a48b764f4450944ef5f57503b7d4-with-play.gif)](https://www.loom.com/share/95a1a48b764f4450944ef5f57503b7d4)
+## 🎥 Demo Video
+
+[**▶️ Watch DevLog in Action**](https://www.loom.com/share/95a1a48b764f4450944ef5f57503b7d4)
+
+*See how easy it is to log your daily development progress and chat with your logs using AI!*
 
 ## Features
 
