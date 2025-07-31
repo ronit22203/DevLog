@@ -16,9 +16,9 @@ from config import Config
 try:
     import google.generativeai as genai
 except ImportError:
-    print("❌ google-generativeai package not found!")
-    print("💡 Install it with: pip install google-generativeai")
-    print("💡 Or run: make install")
+    print("google-generativeai package not found!")
+    print("Install it with: pip install google-generativeai")
+    print("Or run: make install")
     exit(1)
 
 class DevLogAssistant:
@@ -36,17 +36,17 @@ class DevLogAssistant:
             self.model = genai.GenerativeModel(self.model_name)
             
         except ValueError as e:
-            print(f"❌ Configuration error: {e}")
+            print(f"Configuration error: {e}")
             exit(1)
         except Exception as e:
-            print(f"❌ Error initializing AI assistant: {e}")
+            print(f"Error initializing AI assistant: {e}")
             exit(1)
     
     def load_logs(self):
         """Load and return the content of the log file"""
         if not os.path.exists(self.log_file):
-            print(f"❌ Log file not found: {self.log_file}")
-            print("💡 Create your first entry with: make log")
+            print(f"Log file not found: {self.log_file}")
+            print("Create your first entry with: make log")
             return None
         
         try:
@@ -54,13 +54,13 @@ class DevLogAssistant:
                 content = file.read()
             
             if not content.strip():
-                print(f"⚠️  Log file is empty: {self.log_file}")
-                print("💡 Create your first entry with: make log")
+                print(f"Log file is empty: {self.log_file}")
+                print("Create your first entry with: make log")
                 return None
             
             return content
         except Exception as e:
-            print(f"❌ Error reading log file: {e}")
+            print(f"Error reading log file: {e}")
             return None
     
     def parse_entries(self, content):
@@ -109,15 +109,15 @@ Answer in a conversational, encouraging tone that helps the developer reflect on
         except Exception as e:
             error_msg = str(e)
             if "429" in error_msg or "quota" in error_msg.lower():
-                return ("⚠️  API quota exceeded! You've hit the daily limit.\n"
-                       "💡 Try again tomorrow or upgrade to a paid plan.\n"
-                       "🔗 More info: https://ai.google.dev/gemini-api/docs/rate-limits")
+                return ("API quota exceeded! You've hit the daily limit.\n"
+                       "Try again tomorrow or upgrade to a paid plan.\n"
+                       "More info: https://ai.google.dev/gemini-api/docs/rate-limits")
             else:
-                return f"❌ Error generating response: {e}"
+                return f"Error generating response: {e}"
     
     def start_chat(self):
         """Start the interactive chat session"""
-        print("🔥 DevLog AI Assistant v1.0")
+        print("DevLog AI Assistant v1.0")
         print("=" * 40)
         
         # Load logs
@@ -127,39 +127,39 @@ Answer in a conversational, encouraging tone that helps the developer reflect on
         
         context = self.get_context_summary(content)
         
-        print(f"✅ Loaded {context['num_entries']} log entries ({context['content_length']} characters)")
-        print(f"🤖 Using {self.model_name} model")
+        print(f"Loaded {context['num_entries']} log entries ({context['content_length']} characters)")
+        print(f"Using {self.model_name} model")
         
-        print("\n💬 Chat with your development logs!")
-        print("💡 Examples:")
+        print("\nChat with your development logs!")
+        print("Examples:")
         print("   • 'What did I learn this week about React?'")
         print("   • 'What challenges have I been facing?'")
         print("   • 'Summarize my recent decisions'")
         print("   • 'What should I focus on next?'")
-        print("\n📝 Type 'quit' to exit\n")
+        print("\nType 'quit' to exit\n")
         
         # Chat loop
         while True:
             try:
-                user_input = input("🔥 You: ").strip()
+                user_input = input("You: ").strip()
                 
                 if user_input.lower() in ['quit', 'exit', 'q']:
-                    print("\n👋 Thanks for using DevLog AI Assistant! 🚀")
-                    print("💡 Keep logging your journey with: make log")
+                    print("\nThanks for using DevLog AI Assistant!")
+                    print("Keep logging your journey with: make log")
                     break
                 
                 if not user_input:
                     continue
                 
-                print("🤖 Assistant: ", end="", flush=True)
+                print("Assistant: ", end="", flush=True)
                 response = self.generate_response(user_input, context)
                 print(f"{response}\n")
                 
             except KeyboardInterrupt:
-                print("\n\n👋 Chat interrupted. Keep building! 🚀")
+                print("\n\nChat interrupted. Keep building!")
                 break
             except Exception as e:
-                print(f"\n❌ Error: {e}")
+                print(f"\nError: {e}")
         
         return True
 

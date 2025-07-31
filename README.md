@@ -1,20 +1,20 @@
-# 🔥 DevLog - AI-Powered Daily Development Logger
+# DevLog - AI-Powered Daily Development Logger
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 
 **DevLog** is a simple yet powerful CLI tool that helps developers track their daily progress, learnings, and challenges using AI-powered insights. Built for developers who want to reflect on their journey and get intelligent feedback on their growth.
 
-## ✨ Features
+## Features
 
-- 📝 **Simple CLI interface** - Quick daily logging with three focused questions
-- 🤖 **AI-powered insights** - Chat with your logs using Google Gemini API
-- 📊 **Markdown format** - Human-readable logs with timestamps
-- 🚀 **Easy setup** - One-command installation and configuration
-- 🔍 **Intelligent search** - Ask questions about your development journey
-- 💡 **Self-reflection** - Track mood, progress, and blockers over time
+- **Simple CLI interface** - Quick daily logging with three focused questions
+- **AI-powered insights** - Chat with your logs using Google Gemini API
+- **Markdown format** - Human-readable logs with timestamps
+- **Easy setup** - One-command installation and configuration
+- **Intelligent search** - Ask questions about your development journey
+- **Self-reflection** - Track mood, progress, and blockers over time
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Python 3.8 or higher
@@ -46,15 +46,15 @@ make log    # Add a daily entry
 make chat   # Chat with your logs
 ```
 
-## 📖 Usage
+## Usage
 
 ### Daily Logging
 ```bash
 make log
 ```
 This will prompt you with three reflection questions:
-1. **What did you learn today?** - Capture new knowledge and insights
-2. **What decision moved your project forward?** - Track important decisions
+1. **📚 What did you learn today?** - Capture new knowledge and insights
+2. **🚀 What decision moved your project forward?** - Track important decisions
 3. **What's unclear or bothering you?** - Document challenges and blockers
 
 ### AI Chat Interface
@@ -92,7 +92,7 @@ devlog/
     └── EXAMPLES.md         # Usage examples and tips
 ```
 
-## 🛠️ Advanced Configuration
+## Advanced Configuration
 
 ### Custom Log File Location
 ```bash
@@ -121,7 +121,7 @@ make dev-install  # Install development dependencies
 make test         # Run tests
 ```
 
-## 📊 Example Log Entry
+## Example Log Entry
 
 ```markdown
 ## 2025-07-30 - Daily Log (14:30)
@@ -132,7 +132,7 @@ Learned about Docker multi-stage builds to optimize image size. Reduced our prod
 ### 🚀 Decision That Moved My Project Forward
 Decided to implement Redis caching for our API responses. This should reduce database load by ~70% based on our query patterns.
 
-### 🤔 What I'm Unclear About / What's Bothering Me
+### What I'm Unclear About / What's Bothering Me
 Still struggling with the websocket connection drops in production. Need to investigate if it's a load balancer issue or application-level problem.
 
 ---
@@ -171,4 +171,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Happy logging! 🚀 Track your journey, reflect with AI, and grow as a developer.**
+**Happy logging! Track your journey, reflect with AI, and grow as a developer.**

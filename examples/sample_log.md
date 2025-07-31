@@ -9,7 +9,7 @@ Learned about Docker multi-stage builds to optimize image size. Managed to reduc
 ### 🚀 Decision That Moved My Project Forward
 Decided to implement Redis caching for our API responses. Based on our query patterns analysis, this should reduce database load by approximately 70% and improve response times for frequently accessed data.
 
-### 🤔 What I'm Unclear About / What's Bothering Me
+### What I'm Unclear About / What's Bothering Me
 Still struggling with intermittent websocket connection drops in production. Need to investigate whether it's a load balancer configuration issue or something at the application level. The logs aren't giving clear indicators.
 
 ---
@@ -22,7 +22,7 @@ Discovered that our websocket issues were caused by nginx proxy_read_timeout bei
 ### 🚀 Decision That Moved My Project Forward
 Implemented proper error boundaries in our React components. This will prevent the entire app from crashing when individual components fail, much better user experience.
 
-### 🤔 What I'm Unclear About / What's Bothering Me
+### What I'm Unclear About / What's Bothering Me
 The team is split on whether to use TypeScript for the new microservice. I'm leaning towards it for better type safety, but some developers are concerned about the learning curve and development speed.
 
 ---
@@ -35,7 +35,7 @@ Learned about PostgreSQL partial indexes and how they can significantly improve 
 ### 🚀 Decision That Moved My Project Forward
 Finally convinced the team to adopt TypeScript for the new microservice. Created a simple setup guide and offered to pair program with team members who need help. The type safety benefits are worth the initial investment.
 
-### 🤔 What I'm Unclear About / What's Bothering Me
+### What I'm Unclear About / What's Bothering Me
 Feeling a bit overwhelmed with the current sprint workload. We have the Redis implementation, TypeScript migration, and two critical bug fixes all due by Friday. Need to discuss prioritization with the PM.
 
 ---

@@ -14,7 +14,7 @@ from config import Config
 
 def get_user_input():
     """Collect the three daily reflection inputs from the user"""
-    print("🔥 DevLog - Daily Development Logger")
+    print("DevLog - Daily Development Logger")
     print("=" * 40)
     print("Please answer the following questions:\n")
     
@@ -42,13 +42,13 @@ def format_entry(learning, decision, unclear):
     entry = f"""
 ## {date_str} - Daily Log ({time_str})
 
-### 📚 What I Learned Today
+### What I Learned Today
 {learning}
 
-### 🚀 Decision That Moved My Project Forward
+### Decision That Moved My Project Forward
 {decision}
 
-### 🤔 What I'm Unclear About / What's Bothering Me
+### What I'm Unclear About / What's Bothering Me
 {unclear}
 
 ---
@@ -66,11 +66,11 @@ def append_to_log_file(entry):
         with open(log_file, 'a', encoding='utf-8') as file:
             file.write(entry)
         
-        print(f"\n✅ Entry successfully logged to {log_file}")
-        print("💡 Use 'make chat' to analyze your logs with AI!")
+        print(f"\nEntry successfully logged to {log_file}")
+        print("Use 'make chat' to analyze your logs with AI!")
         
     except Exception as e:
-        print(f"\n❌ Error writing to file: {e}")
+        print(f"\nError writing to file: {e}")
 
 def main():
     """Main function to run the daily logging script"""
@@ -80,7 +80,7 @@ def main():
         
         # Validate inputs (ensure not empty)
         if not any([learning.strip(), decision.strip(), unclear.strip()]):
-            print("\n⚠️  All fields are empty! Please provide at least one response.")
+            print("\nAll fields are empty! Please provide at least one response.")
             return
         
         # Format the entry
@@ -89,13 +89,13 @@ def main():
         # Save to file
         append_to_log_file(entry)
         
-        print("\n📝 Thank you for logging your daily reflections!")
-        print("🔥 Keep building, keep learning! 🚀")
+        print("\nThank you for logging your daily reflections!")
+        print("Keep building, keep learning!")
         
     except KeyboardInterrupt:
-        print("\n\n👋 Logging cancelled. See you tomorrow!")
+        print("\n\nLogging cancelled. See you tomorrow!")
     except Exception as e:
-        print(f"\n❌ An unexpected error occurred: {e}")
+        print(f"\nAn unexpected error occurred: {e}")
 
 if __name__ == "__main__":
     main()

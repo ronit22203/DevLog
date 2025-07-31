@@ -25,8 +25,8 @@ class Config:
         if not api_key:
             raise ValueError(
                 "GOOGLE_API_KEY environment variable not found!\n"
-                "💡 Get your API key from: https://makersuite.google.com/app/apikey\n"
-                "💡 Then run: export GOOGLE_API_KEY='your-api-key-here'"
+                "Get your API key from: https://makersuite.google.com/app/apikey\n"
+                "Then run: export GOOGLE_API_KEY='your-api-key-here'"
             )
         return api_key
     
